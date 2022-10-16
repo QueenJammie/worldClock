@@ -1,0 +1,36 @@
+.formattingDate label {
+    margin-right: 1em;
+}
+
+.formattingDate input {
+    margin-right: 2em;
+}
+
+.selectCity input,
+.selectCity select {
+    min-width: 300px;
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.selectCity .button {
+    margin-top: 5px;
+    margin-left: 15em;
+    min-width: 100px;
+}
+
+.block {
+    display: block;
+}
+
+.horloge {
+    margin-top: 2%;
+    margin-left: 4%;
+    background-color: blueviolet;
+    display: inline-block;
+    padding: 13px;
+    border: 2px solid #000;
+    border-radius: 15px;
+    color: #fff;
+    box-shadow: 4px 3px rgba(61, 61, 61, 0.385);
+}
