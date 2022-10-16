@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.38/moment-timezone-with-data-1970-2030.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Time zones are fun!</title>
+    <style>
+    </style>
+</head>
+<body>
+    <form action="/search">
+        <select id="city">
+            <option value="">Select a city</option>
+            <option value="paris">Paris FR</option>
+            <option value="tokyo">Tokyo JP</option>
+            <option value="sydney">Sydney AU</option>
+            <option value="montreal">Montreal QC</option>
+        </select>
+    </form>
+    <script>
+        function displayCityWeather(event) {
+            if (event.target.value.length > 0) {
+                if (event.target.value === 'paris') {
+                    let sentence = moment().tz("Europe/Paris").add(0, 'day').format(`[It is] dddd, MMMM D, YYYY hh:mm A [in Europe/Paris]`);
+                    alert(`${sentence}`);
+                }
+                else if (event.target.value === 'tokyo') {
+                    let sentence = moment().tz("Asia/Tokyo").add(0, 'day').format(`[It is] dddd, MMMM D, YYYY hh:mm A [in Asia/Tokyo]`);
+                    alert(`${sentence}`);
+                }
+                else if (event.target.value === 'sydney') {
+                    let sentence = moment().tz("Australia/Sydney").add(0, 'day').format(`[It is] dddd, MMMM D, YYYY hh:mm A [in Australia/Sydney]`);
+                    alert(`${sentence}`);
+                }
+                else if (event.target.value === 'montreal') {
+                    let sentence = moment().tz("America/Montreal").add(0, 'day').format(`[It is] dddd, MMMM D, YYYY hh:mm A [in America/Montreal]`);
+                    alert(`${sentence}`);
+                }
+            }
+        }
+
+        let citySelected = document.querySelector("#city");
+        citySelected.addEventListener('change', displayCityWeather);
+        console.log(citySelected);
+    </script>
+</body>
+</html>
