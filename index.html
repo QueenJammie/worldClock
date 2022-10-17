@@ -12,33 +12,41 @@
     <title>Horloge mondiale</title>
 </head>
 <body>
-    <div class="horloge mt-5">
-        <label for="displayTime">How would you like to see the time?</label>
-        <form action="./formattingTime.php" class="formattingDate" id="displayTime">
-            <label for="USTime">As English</label>
-            <input type="radio" name="CountryTime" id="USTime" checked />
-            <label for="EuTime">As French</label>
-            <input type="radio" name="CountryTime" id="EuTime">
-        </form>
-        <form action="" class="selectCity">
-            <label for="city" class="block">Please, entez a city you want to know the time to</label>
-            <input type="text" name="country" class="block" id="country" autofocus />
-            <label for="lastResearch">Popular cities: </label>
-            <select name="city" class="block" id="lastResearch">
-                <option value="">Please, select a country</option>
-                <option value="montreal">America/Montreal</option>
-                <option value="paris">Europe/Paris</option>
-                <option value="tokyo">Asia/Tokyo</option>
-                <option value="usa">Unites State of America</option>
-                <option value="italy">Italia</option>
-            </select>
-            <input type="submit" class="button btn btn-primary" value="Envoyer">
-        </form>
-        <br />
-        <div>Locally, in <span id="actualCountry"></span> timezone: <span class="block" id="local"></span></div>
-        <div class="mt-3">In America/Los Angeles timezone : <span class="block" id="losAngeles"></span></div>
-        <div class="mt-3">In Asia/Tokyo timezone: <span class="block" id="tokyo"></span></div>
-    </div>
+    <header>
+
+    </header>
+    <main>
+        <div class="horloge mt-5">
+            <label for="displayTime">How would you like to see the time?</label>
+            <form action="./formattingTime.php" class="formattingDate" id="displayTime">
+                <label for="USTime">As English</label>
+                <input type="radio" name="CountryTime" id="USTime" checked />
+                <label for="EuTime">As French</label>
+                <input type="radio" name="CountryTime" id="EuTime">
+            </form>
+            <form action="" class="selectCity">
+                <label for="city" class="block">Please, entez a city you want to know the time to</label>
+                <input type="text" name="country" class="block" id="country" autofocus />
+                <label for="lastResearch">Popular cities: </label>
+                <select name="city" class="block" id="lastResearch">
+                    <option value="">Please, select a country</option>
+                    <option value="montreal">America/Montreal</option>
+                    <option value="paris">Europe/Paris</option>
+                    <option value="tokyo">Asia/Tokyo</option>
+                    <option value="usa">Unites State of America</option>
+                    <option value="italy">Italia</option>
+                </select>
+                <input type="submit" class="button btn btn-primary" value="Envoyer">
+            </form>
+            <br />
+            <div>Locally, in <span id="actualCountry"></span> timezone: <span class="block" id="local"></span></div>
+            <div class="mt-3">In America/Los Angeles timezone : <span class="block" id="losAngeles"></span></div>
+            <div class="mt-3">In Asia/Tokyo timezone: <span class="block" id="tokyo"></span></div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://github.com/QueenJammie/worldClock" alt="Github repository" target="_blank">Open-source code</a> by <a href="https://www.facebook.com/jammie.elena.lachance" alt="Facebook link" target="_blank">Jammie Lachance-Côté</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
