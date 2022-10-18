@@ -1,6 +1,12 @@
 footer {
-    margin-left: 4%;
+    margin-left: 35%;
     margin-top: 10px;
+}
+
+@media (width < 900px) {
+    footer {
+        margin-left: 0;
+    }
 }
 
 .formattingDate label {
@@ -30,7 +36,7 @@ footer {
 
 .horloge {
     margin-top: 2%;
-    margin-left: 4%;
+    margin-left: 35%;
     background-color: blueviolet;
     display: inline-block;
     padding: 13px;
@@ -38,4 +44,10 @@ footer {
     border-radius: 15px;
     color: #fff;
     box-shadow: 4px 3px rgba(61, 61, 61, 0.385);
+}
+
+@media (width < 900px) {
+    .horloge {
+        margin-left: 10%;
+    }
 }
