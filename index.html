@@ -17,6 +17,7 @@
     </header>
     <main>
         <div class="horloge mt-5">
+            <h1>Horloge</h1>
             <label for="displayTime">How would you like to see the time?</label>
             <form action="./formattingTime.php" class="formattingDate" id="displayTime">
                 <label for="USTime">As English</label>
@@ -39,9 +40,11 @@
                 <input type="submit" class="button btn btn-primary" value="Envoyer">
             </form>
             <br />
-            <div>Locally, in <span id="actualCountry"></span> timezone: <span class="block" id="local"></span></div>
-            <div class="mt-3">In America/Los Angeles timezone : <span class="block" id="losAngeles"></span></div>
-            <div class="mt-3">In Asia/Tokyo timezone: <span class="block" id="tokyo"></span></div>
+            <div class="timezoneArea">
+                <div class="actualTiming"><span class="timezoneHeader">Locally, in <span id="actualCountry"></span> timezone: </span><span class="block date" id="local"></span></div>
+                <div class="mt-3 actualTiming"><span class="timezoneHeader">In America/Los Angeles timezone : </span><span class="block date" id="losAngeles"></span></div>
+                <div class="mt-3 actualTiming"><span class="timezoneHeader">In Asia/Tokyo timezone: </span><span class="block date" id="tokyo"></span></div>
+            </div>
         </div>
     </main>
     <footer>

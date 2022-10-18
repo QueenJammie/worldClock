@@ -1,15 +1,15 @@
 function displayCityWeather(event) {
     if (event.target.value.length > 0) {
         if (event.target.value === 'montreal' || event.target.value === 'Montreal' || event.target.value === 'montréal' || event.target.value === 'Montréal') {
-            let sentence = moment().tz('America/Montreal').format('[It is] dddd, MMMM D, YYYY h:m A [in America/Montreal.]');
+            let sentence = moment().tz('America/Montreal').format('[It is] dddd, MMMM D, YYYY h:mm A [in America/Montreal.]');
             alert(sentence);
         }
         else if (event.target.value === 'paris' || event.target.value === 'Paris') {
-            let sentence = moment().tz('Europe/Paris').format('[It is] dddd, MMMM D, YYYY h:m A [in Europe/Paris.]');
+            let sentence = moment().tz('Europe/Paris').format('[It is] dddd, MMMM D, YYYY h:mm A [in Europe/Paris.]');
             alert(sentence);
         }
         else if (event.target.value === 'tokyo' || event.target.value === 'Tokyo') {
-            let sentence = moment().tz('Asia/Tokyo').add(0, 'day').format(`[It is] dddd, MMMM D, YYYY h:m A [in Asia/Tokyo]`);
+            let sentence = moment().tz('Asia/Tokyo').add(0, 'day').format(`[It is] dddd, MMMM D, YYYY h:mm A [in Asia/Tokyo]`);
             alert(sentence);
         }
     }
@@ -28,17 +28,17 @@ function displayTime() {
     localCountryElement.innerHTML = localCountry;
     let localTimezone = moment.tz(localCountry);
     let localElement = document.querySelector("#local");
-    localElement.innerHTML = localTimezone.format("MMMM Do, YYYY || HH[h]:mm[m]ss[s]");
+    localElement.innerHTML = localTimezone.format("MMMM Do, YYYY || h[h]:mm[m]ss[s] [<small>]A[</small>]");
 
     // America/Los Angeles
     let Los_AngelesTimezone = moment.tz('America/Los_Angeles');
     let Los_AngelesTimezoneElement = document.querySelector("#losAngeles");
-    Los_AngelesTimezoneElement.innerHTML = Los_AngelesTimezone.format("MMMM Do, YYYY || HH[h]:mm[m]ss[s]");
+    Los_AngelesTimezoneElement.innerHTML = Los_AngelesTimezone.format("MMMM Do, YYYY || h[h]:mm[m]ss[s] [<small>]A[</small>]");
 
     // Asia/Tokyo
     let tokyoTimezone = moment.tz('Asia/Tokyo');
     let tokyoTimezoneElement = document.querySelector("#tokyo");
-    tokyoTimezoneElement.innerHTML = tokyoTimezone.format("MMMM Do, YYYY || HH[h]:mm[m]ss[s]");
+    tokyoTimezoneElement.innerHTML = tokyoTimezone.format("MMMM Do, YYYY || h[h]:mm[m]ss[s] [<small>]A[</small>]");
 
     // Tomorrow
     // date.innerHTML = moment().add(1, 'days').format("MMMM Do, YYYY || H:m[h]");
