@@ -26,24 +26,25 @@
                 <input type="radio" name="CountryTime" id="EuTime">
             </form>
             <form action="" class="selectCity">
-                <label for="city" class="block">Please, entez a city you want to know the time to</label>
+                <label for="city" class="block">Please, entez a popular city you want to know the time to</label>
                 <input type="text" name="country" class="block" id="country" autofocus />
                 <label for="lastResearch">Popular cities: </label>
                 <select name="city" class="block" id="lastResearch">
-                    <option value="">Please, select a country</option>
-                    <option value="montreal">America/Montreal</option>
-                    <option value="paris">Europe/Paris</option>
-                    <option value="tokyo">Asia/Tokyo</option>
-                    <option value="washington">USA/Washington</option>
-                    <option value="rome">Italia/Rome</option>
+                    <option value="">Please, select a city</option>
+                    <option value="America/Los_Angeles">America/Los Angeles</option>
+                    <option value="Europe/Paris">Europe/Paris</option>
+                    <option value="Asia/Tokyo">Asia/Tokyo</option>
+                    <option value="Europe/Rome">Europe/Rome</option>
                 </select>
-                <input type="submit" class="button btn btn-primary" value="Envoyer">
+                <input type="" class="button btn btn-primary" value="Envoyer">
             </form>
             <br />
             <div class="timezoneArea">
                 <div class="actualTiming"><span class="timezoneHeader">Locally, in <span id="actualCountry"></span> timezone: </span><span class="block date" id="local"></span></div>
+                <div id="timezoneElement">
                 <div class="mt-3 actualTiming"><span class="timezoneHeader">In America/Los Angeles timezone : </span><span class="block date" id="losAngeles"></span></div>
                 <div class="mt-3 actualTiming"><span class="timezoneHeader">In Asia/Tokyo timezone: </span><span class="block date" id="tokyo"></span></div>
+                </div>
             </div>
         </div>
     </main>
